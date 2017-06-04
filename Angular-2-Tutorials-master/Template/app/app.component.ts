@@ -7,4 +7,6 @@ import { TutorialsComponent } from './tutorials.component';
               <my-tutorials></my-tutorials>`,
   directives: [TutorialsComponent]
 })
-export class AppComponent { }
+export class AppComponent { 
+
+}

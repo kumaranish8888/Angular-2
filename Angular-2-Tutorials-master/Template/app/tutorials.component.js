@@ -11,19 +11,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var TutorialsComponent = (function () {
     function TutorialsComponent() {
-        this.title = "My New Tutorial is published";
-        this.applyClass = true;
-        this.applyBlue = true;
+        this.date = new Date();
     }
     TutorialsComponent = __decorate([
         core_1.Component({
             selector: 'my-tutorials',
-            template: "<h2>{{title}}</h2>\n                <div [class.myClass]=\"applyClass\">My Content in Red</div>\n                <div [style.color]=\"applyBlue? 'blue' : 'orange'\">This should be in blue</div>",
-            styles: [".myClass {\n        color: Red;\n    }"]
+            template: "<h2>{{date}}</h2>\n                <h2>{{date | date: 'fullDate'}}</h2>\n                <h2>{{date | date: 'shortDate'}}</h2>\n                <h2>{{date | date: 'mediumTime'}}</h2>\n                <h2>{{date | date: 'shortTime'}}</h2>"
         }), 
         __metadata('design:paramtypes', [])
     ], TutorialsComponent);
     return TutorialsComponent;
 }());
 exports.TutorialsComponent = TutorialsComponent;
+//<h2>{{date}}</h2>     Sun Jun 04 2017 14:24:08 GMT-0400 (Eastern Daylight Time)
+//<h2>{{date | date: 'fullDate'}}</h2>      Sunday, June 4, 2017
 //# sourceMappingURL=tutorials.component.js.map
