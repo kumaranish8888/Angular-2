@@ -7,26 +7,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var forms_1 = require("@angular/forms");
-var AppComponent = (function () {
-    function AppComponent() {
-        this.userForm = new forms_1.FormGroup({
-            name: new forms_1.FormControl(),
-            email: new forms_1.FormControl(),
-            address: new forms_1.FormGroup({
-                street: new forms_1.FormControl(),
-                city: new forms_1.FormControl(),
-                zipcode: new forms_1.FormControl()
-            })
-        });
+var AnishComponent = (function () {
+    function AnishComponent() {
     }
-    return AppComponent;
+    return AnishComponent;
 }());
-AppComponent = __decorate([
+AnishComponent = __decorate([
     core_1.Component({
-        selector: 'my-app',
-        templateUrl: 'app/app.component.html'
+        selector: 'anish-app',
+        template: "<h2>This is Anish Component</h2>"
     })
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+], AnishComponent);
+exports.AnishComponent = AnishComponent;
+//# sourceMappingURL=anish.component.js.map

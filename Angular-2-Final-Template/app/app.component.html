@@ -1,34 +1,30 @@
 <div class="container">
     <h2>User Form</h2>
-
-    <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+    <form [formGroup]="userForm">
         <div class="form-group">
             <label>Name</label>
-            <input type="text" class="form-control" name="name" ngModel>
+            <input type="text" class="form-control">
         </div>
-
+        
         <div class="form-group">
-            <label>Gender</label>
-            <input type="text" class="form-control" name="gender" ngModel>
-        </div>
-
-        <div ngModelGroup="address">
-            <div class="form-group">
-            <label>City</label>
-            <input type="text" class="form-control" name="city" ngModel>
+            <label>Email</label>
+            <input type="text" class="form-control">
         </div>
 
         <div class="form-group">
             <label>Street</label>
-            <input type="text" class="form-control" name="street" ngModel>
+            <input type="text" class="form-control">
         </div>
 
         <div class="form-group">
-            <label>Country</label>
-            <input type="text" class="form-control" name="country" ngModel>
-        </div>
+            <label>City</label>
+            <input type="text" class="form-control">
         </div>
 
-        <button class="btn btn-primary">Submit</button>
+        <div class="form-group">
+            <label>PostalCode</label>
+            <input type="text" class="form-control">
+        </div>
+            <button class="btn btn-primary">Submit</button>
     </form>
 </div>
