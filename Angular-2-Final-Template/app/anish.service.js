@@ -10,25 +10,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var anish_service_1 = require("./anish.service");
-var AnishComponent = (function () {
-    function AnishComponent(_anishservice) {
-        this._anishservice = _anishservice;
-        this.employees = [];
+var http_1 = require("@angular/http");
+require("rxjs/add/operator/map");
+var AnishService = (function () {
+    function AnishService(_http) {
+        this._http = _http;
+        this._url = 'api/employeedata.json';
     }
-    AnishComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this._anishservice.getEmployees()
-            .subscribe(function (resEmployeeData) { return _this.employees = resEmployeeData; });
+    AnishService.prototype.getEmployees = function () {
+        return this._http.get(this._url)
+            .map(function (response) { return response.json(); });
     };
-    return AnishComponent;
+    return AnishService;
 }());
-AnishComponent = __decorate([
-    core_1.Component({
-        selector: 'anish-app',
-        template: "<h2>Employee list</h2>\n                <ul *ngFor=\"let employee of employees\">\n                <li>{{employee.name}}</li>\n                </ul>"
-    }),
-    __metadata("design:paramtypes", [anish_service_1.AnishService])
-], AnishComponent);
-exports.AnishComponent = AnishComponent;
-//# sourceMappingURL=anish.component.js.map
+AnishService = __decorate([
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [http_1.Http])
+], AnishService);
+exports.AnishService = AnishService;
+//# sourceMappingURL=anish.service.js.map

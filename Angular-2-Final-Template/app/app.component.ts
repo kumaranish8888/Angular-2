@@ -1,20 +1,16 @@
-import { Component } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { AnishService } from './anish.service';
 
 @Component({
   selector: 'my-app',
-  templateUrl: 'app/app.component.html'
+  
+  template: `<h1>Random Company</h1>
+            <anish-app></anish-app>
+            <anish-detail></anish-detail>
+            <anish-practice></anish-practice>`,
+  providers: [AnishService]
 })
 
 export class AppComponent { 
 
-  userForm = new FormGroup({
-    name: new FormControl(),
-    email: new FormControl(),
-    address: new FormGroup({
-      street: new FormControl(),
-      city: new FormControl(),
-      zipcode: new FormControl()
-    }) 
-  });
  }

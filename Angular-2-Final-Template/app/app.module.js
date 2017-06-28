@@ -12,6 +12,9 @@ var app_component_1 = require("./app.component");
 var sub_component_1 = require("./sub.component");
 var anish_component_1 = require("./anish.component");
 var forms_1 = require("@angular/forms");
+var anishdetail_component_1 = require("./anishdetail.component");
+var http_1 = require("@angular/http");
+var anish_practice_1 = require("./anish.practice");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -19,8 +22,8 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, forms_1.ReactiveFormsModule],
-        declarations: [app_component_1.AppComponent, sub_component_1.SubComponent, anish_component_1.AnishComponent],
+        imports: [platform_browser_1.BrowserModule, forms_1.ReactiveFormsModule, http_1.HttpModule],
+        declarations: [app_component_1.AppComponent, sub_component_1.SubComponent, anish_component_1.AnishComponent, anishdetail_component_1.AnishdetailComponent, anish_practice_1.AnishPractice],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);

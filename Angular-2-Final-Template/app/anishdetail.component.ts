@@ -2,22 +2,22 @@ import { Component, OnInit } from '@angular/core';
 import { AnishService } from './anish.service';
 
 @Component ({
-    selector: 'anish-app',
-    template: `<h2>Employee list</h2>
+    selector: 'anish-detail',
+    template: `<h2>Employee data in detail</h2>
                 <ul *ngFor="let employee of employees">
-                <li>{{employee.name}}</li>
+                    <li>{{employee.id}} {{ employee.name}}  {{employee.email}}</li>
                 </ul>`
 })
 
-export class AnishComponent implements OnInit { 
+export class AnishdetailComponent implements OnInit {
 
-    employees = [];
+     employees = [];
 
-    constructor (private _anishservice: AnishService){}
+     constructor(private _anishservice: AnishService){}
 
-
-    ngOnInit(){
+     ngOnInit(){
         this._anishservice.getEmployees()
             .subscribe(resEmployeeData => this.employees = resEmployeeData );
     }
  }
+

@@ -11,24 +11,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var anish_service_1 = require("./anish.service");
-var AnishComponent = (function () {
-    function AnishComponent(_anishservice) {
+var AnishdetailComponent = (function () {
+    function AnishdetailComponent(_anishservice) {
         this._anishservice = _anishservice;
         this.employees = [];
     }
-    AnishComponent.prototype.ngOnInit = function () {
+    AnishdetailComponent.prototype.ngOnInit = function () {
         var _this = this;
         this._anishservice.getEmployees()
             .subscribe(function (resEmployeeData) { return _this.employees = resEmployeeData; });
     };
-    return AnishComponent;
+    return AnishdetailComponent;
 }());
-AnishComponent = __decorate([
+AnishdetailComponent = __decorate([
     core_1.Component({
-        selector: 'anish-app',
-        template: "<h2>Employee list</h2>\n                <ul *ngFor=\"let employee of employees\">\n                <li>{{employee.name}}</li>\n                </ul>"
+        selector: 'anish-detail',
+        template: "<h2>Employee data in detail</h2>\n                <ul *ngFor=\"let employee of employees\">\n                    <li>{{employee.id}} {{ employee.name}}  {{employee.email}}</li>\n                </ul>"
     }),
     __metadata("design:paramtypes", [anish_service_1.AnishService])
-], AnishComponent);
-exports.AnishComponent = AnishComponent;
-//# sourceMappingURL=anish.component.js.map
+], AnishdetailComponent);
+exports.AnishdetailComponent = AnishdetailComponent;
+//# sourceMappingURL=anishdetail.component.js.map

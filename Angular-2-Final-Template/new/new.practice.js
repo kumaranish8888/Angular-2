@@ -7,18 +7,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var anish_service_1 = require("./anish.service");
-var AppComponent = (function () {
-    function AppComponent() {
+var NewPractice = (function () {
+    function NewPractice() {
     }
-    return AppComponent;
+    return NewPractice;
 }());
-AppComponent = __decorate([
+NewPractice = __decorate([
     core_1.Component({
-        selector: 'my-app',
-        template: "<h1>Random Company</h1>\n            <anish-app></anish-app>\n            <anish-detail></anish-detail>\n            <anish-practice></anish-practice>",
-        providers: [anish_service_1.AnishService]
+        selector: 'new-practice',
+        template: '<h3>Trying in different folder</h3>'
     })
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+], NewPractice);
+exports.NewPractice = NewPractice;
+//# sourceMappingURL=new.practice.js.map
